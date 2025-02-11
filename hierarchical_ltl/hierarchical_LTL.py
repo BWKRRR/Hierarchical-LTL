@@ -535,6 +535,7 @@ def hierarchical_ltl_planner(args):
         print_subtask_info(task_hierarchy, primitive_subtasks, composite_subtasks)
     # ----------------- partial global order set -----------------
     primitive_subtasks_with_identifier, primitive_subtasks_partial_order = produce_global_poset(task_hierarchy, composite_subtasks, primitive_subtasks, args.vis)
+    primitive_subtasks_partial_order = primitive_subtasks_partial_order[4:]
     if args.vis:
         print_primitive_subtasks_with_identifer(primitive_subtasks_with_identifier, task_hierarchy)
         print_global_partial_order(primitive_subtasks_partial_order, task_hierarchy)
